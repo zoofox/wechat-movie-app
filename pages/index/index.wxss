@@ -1,0 +1,92 @@
+/* pages/main/main.wxss */
+.content{
+    background: #fff;
+    min-height: 100%;
+    min-width: 100%;
+}
+.swiper{
+    border: darkslategrey solid 1px;
+}
+.separator{
+    width: 100%;
+    margin-bottom: 1px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 0;
+}
+.movie-author-info{
+    padding: 3px 0;
+    border-bottom:1px solid rgba(224,226,230,.3);
+}
+.movie-name{
+    font-weight: bold;
+}
+.author-name{
+    margin-right: 10px;
+}
+.movie-name,.date-info{
+    float: left;
+}
+.author-name,.weather-info{
+    float: right;
+}
+.movie-name,.author-name,.date-info,.weather-info{
+    font-size: 13px;
+}
+.movie-author-info image{
+   float: right;
+   position: relative;top:-2px;
+}
+
+.date-weather-info{
+    overflow: hidden;
+    padding: 3px 0;
+}
+
+.movie-base{
+    padding: 4px 0px 10px 10px;
+    color: #1c2229;
+    font-size: 13px;
+    line-height: 20px;
+    text-indent: 20px;
+    
+}
+
+.operate-area{
+    border-top:1px solid rgba(224,226,230,.3);
+    padding: 3px 2%;
+     display: flex;
+     flex-direction: row;
+}
+
+.operate-area .btn{
+    width: 32%;
+    height: 26px;line-height: 26px;overflow: hidden;border:1px solid red;
+}
+
+.operate-icon{
+    width: 20px;height: 20px;
+    float: left;
+    position: relative;top:3px;
+}
+.introduce,.num{
+    font-size: 12px;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    color: #1c2229;
+    margin-left:10px;
+}
+
+
+.hr{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(224,226,230,.8);
+}
+

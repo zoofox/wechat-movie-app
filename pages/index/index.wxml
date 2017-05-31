@@ -1,0 +1,73 @@
+<!--pages/main/main.wxml-->
+<view class="content">
+  <view class="separator"></view>
+   <!--  <import src="../template/movietpl"/>
+    <template is="movies" data="{{movies}}"/> -->
+     <view class="movie-info" bindtap="detail" id="1">
+       <view class="movie-author-info">
+         <text class="movie-name">摔跤吧！</text>
+          <image style="width: 20px; height: 20px;" mode="aspectFit" src="../../images/grade/5.png"></image>
+         <text class="author-name">一只企鹅</text>
+       </view>
+       <view class="date-weather-info">
+           <text class="date-info">2017-05-31</text>
+           <text class="weather-info">天气：雷电交加</text>
+       </view>
+        <view class="movie-base">听说白雪公主在逃跑 小红帽在担心大灰狼听说疯帽喜欢爱丽丝 丑小鸭会变成白天鹅听说彼得潘总长不大 杰克他有竖琴和魔法听说森林里有糖果屋 灰姑娘丢了心爱的玻璃鞋只有睿智的河水知道 白雪是因为贪玩跑出了城堡小红帽有件抑制自己 变成狼的大红袍总有一条蜿蜒在童话镇里七彩的河</view>
+        <view class="operate-area ">
+          <view class="agree-btn btn">
+            <image class="agree-icon operate-icon"  mode="aspectFit" src="../../images/agree.png"></image>
+            <text class="introduce">深以为然</text>
+            <!-- <text class="num">500</text> -->
+          </view>
+           <view class="disagree-btn btn">
+            <image class="disagree-icon operate-icon"  mode="aspectFit" src="../../images/disagree.png"></image>
+           <text class="introduce">不敢苟同</text>
+            <!-- <text class="num">500</text> -->
+          </view> 
+           <view class="score-btn btn">
+            <image class="score-icon operate-icon"  mode="aspectFit" src="../../images/score.png"></image>
+           <text class="introduce">打个分</text>
+            <!-- <text class="num">--</text> -->
+          </view>
+        </view>
+      </view>
+      <view class="hr"></view>
+       <view class="movie-info" bindtap="detail" id="1">
+       <view class="movie-author-info">
+         <text class="movie-name">摔跤吧！</text>
+          <image style="width: 20px; height: 20px;" mode="aspectFit" src="../../images/grade/5.png"></image>
+         <text class="author-name">一只企鹅</text>
+       </view>
+       <view class="date-weather-info">
+           <text class="date-info">2017-05-31</text>
+           <text class="weather-info">天气：雷电交加</text>
+       </view>
+        <view class="movie-base">听说白雪公主在逃跑 小红帽在担心大灰狼听说疯帽喜欢爱丽丝 丑小鸭会变成白天鹅听说彼得潘总长不大 杰克他有竖琴和魔法听说森林里有糖果屋 灰姑娘丢了心爱的玻璃鞋只有睿智的河水知道 白雪是因为贪玩跑出了城堡小红帽有件抑制自己 变成狼的大红袍总有一条蜿蜒在童话镇里七彩的河</view>
+        <view class="operate-area ">
+          <view class="agree-btn btn">
+            <image class="agree-icon operate-icon"  mode="aspectFit" src="../../images/agree.png"></image>
+            <text class="introduce">深以为然</text>
+            <!-- <text class="num">500</text> -->
+          </view>
+           <view class="disagree-btn btn">
+            <image class="disagree-icon operate-icon"  mode="aspectFit" src="../../images/disagree.png"></image>
+           <text class="introduce">不敢苟同</text>
+            <!-- <text class="num">500</text> -->
+          </view> 
+           <view class="score-btn btn">
+            <image class="score-icon operate-icon"  mode="aspectFit" src="../../images/score.png"></image>
+           <text class="introduce">打个分</text>
+            <!-- <text class="num">--</text> -->
+          </view>
+        </view>
+      </view>
+      <view class="hr"></view>
+
+  </view>
+
+  <view class="bodyLoading">
+    <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">
+        拼命加载中...
+    </loading>
+  </view>
