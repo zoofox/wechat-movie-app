@@ -17,17 +17,17 @@
         <view class="operate-area ">
           <view class="agree-btn btn">
             <image class="agree-icon operate-icon"  mode="aspectFit" src="../../images/agree.png"></image>
-            <text class="introduce">深以为然</text>
+            <text class="introduce">26</text>
             <!-- <text class="num">500</text> -->
           </view>
            <view class="disagree-btn btn">
             <image class="disagree-icon operate-icon"  mode="aspectFit" src="../../images/disagree.png"></image>
-           <text class="introduce">不敢苟同</text>
+           <text class="introduce">500</text>
             <!-- <text class="num">500</text> -->
           </view> 
            <view class="score-btn btn">
             <image class="score-icon operate-icon"  mode="aspectFit" src="../../images/score.png"></image>
-           <text class="introduce">打个分</text>
+           <text class="introduce">平均：89.5</text>
             <!-- <text class="num">--</text> -->
           </view>
         </view>
