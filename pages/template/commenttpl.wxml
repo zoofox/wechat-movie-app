@@ -1,0 +1,16 @@
+<template name='comments'>
+	<block wx:for="{{comments}}" wx:for-item="comment">
+		 <view class="comment-item">
+            <view class="avatar-box">
+                <image mode="aspectFit" class='comment-avatar' src="{{comment.user.avatar}}"></image>
+            </view>
+            <view class="comment-content">
+                <view class="person-info">
+                      <text class="comment-nickname">{{comment.user.authorName}}</text>
+                      <image style="width: 12px; height: 12px;" mode="aspectFit" class='comment-avatar' src="../../images/grade/{{comment.user.rank}}.png"></image>
+                </view>
+                <text class="comment-article">{{comment.comment}}</text>
+            </view>
+        </view>
+	</block>
+</template>

@@ -1,23 +1,23 @@
 <!--pages/detail/detail.wxml-->
-<view class="content">
-    
-    <view class="img">
-        <image src="{{movie.images.large}}" mode="aspectFit"></image>
+<import src="../template/singlediary"/>
+<view wx:if="{{diary}}">
+    <template is="diary" data="{{diary}}"/>
+</view>
+<view class="comment-box">
+    <view class="comment-header">
+         <image style="width: 20px; height: 20px;" mode="aspectFit" src="../../images/comment.png"></image>
+         <text class="comment-title">评论</text>
     </view>
-
-    <view class="summary">
-        <view class="summaryContent">剧情概要: {{movie.summary}}</view>
-    </view>
-
-    <view class="casts">
-        <view class="text">{{"演员剧照:"}}</view>
-        <view class="castContent">
-            <block wx:for="{{movie.casts}}">
-                <view class="actorIntroduction">
-                    <image src="{{item.avatars.medium}}" class="castPhoto" mode="aspectFit"></image>
-                    <text class="actorName">{{item.name}}</text>
-                </view>
-            </block>
-        </view>
+    <view class="hr"></view>
+    <view class="comment-body">
+        <view wx:if="{{comments}}">
+         <import src="../template/commenttpl"/>
+         <template is="comments" data="{{comments}}"/>
+       </view>
     </view>
 </view>
+<view class="bodyLoading">
+    <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">
+        咕叽咕叽...
+    </loading>
+  </view>

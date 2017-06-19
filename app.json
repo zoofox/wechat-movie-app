@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ffb842",
-    "navigationBarTitleText": "影评日记",
+    "navigationBarTitleText": "日记",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {

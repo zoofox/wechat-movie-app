@@ -14,41 +14,42 @@
     opacity: 0.3;
 }
 
-.movie-info{
+.diary-info{
     display: flex;
     flex-direction: column;
-    padding: 5px 5px 0;
+    padding: 8px 10px 0;
 }
-.movie-author-info{
+.diary-author-info{
     padding: 3px 0;
     border-bottom:1px solid rgba(224,226,230,.3);
 }
-.movie-name{
+.diary-name{
     font-weight: bold;
 }
 .author-name{
     margin-right: 10px;
+    margin-left: 10px;
 }
-.movie-name,.date-info{
+.diary-name,.date-info{
     float: left;
 }
 .author-name,.weather-info{
     float: right;
 }
-.movie-name,.author-name,.date-info,.weather-info{
+.diary-name,.author-name,.date-info,.weather-info{
     font-size: 13px;
 }
-.movie-author-info image{
+.diary-author-info image{
    float: right;
    position: relative;top:-2px;
 }
 
 .date-weather-info{
     overflow: hidden;
-    padding: 3px 0;
+    padding: 5px 0;
 }
 
-.movie-base{
+.diary-base{
     padding: 4px 0px 10px 10px;
     color: #1c2229;
     font-size: 13px;
@@ -59,14 +60,14 @@
 
 .operate-area{
     border-top:1px solid rgba(224,226,230,.3);
-    padding: 3px 2%;
+    padding: 5px 2% 8px;
      display: flex;
      flex-direction: row;
 }
 
 .operate-area .btn{
     width: 33%;
-    height: 26px;line-height: 26px;overflow: hidden;border:1px solid red;
+    height: 26px;line-height: 26px;overflow: hidden;
 }
 
 .operate-icon{
@@ -88,5 +89,8 @@
     height: 1px;
     width: 100%;
     background-color: rgba(224,226,230,.8);
+}
+.avatar{
+    border-radius: 4px;
 }
 

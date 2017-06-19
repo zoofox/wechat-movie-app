@@ -1,54 +1,69 @@
-.content {
-    min-height: 100%;
-    min-width: 100%;
-    background-color: #3a3a3a;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+@import "../index/index.wxss";
+
+
+.comment-box{
+    width: 100%;
+}
+.comment-header{
+    padding: 5px 10px;
+    overflow: hidden;
+}
+.comment-header image{
+    border-radius: 100%;
+    float: left;
 }
 
-.img image {
-    padding-top: 10px;
-}
-
-.summary {
-    margin: 10px;
-}
-
-.summaryContent {
-    color: white;
-    padding: 5px;
+.comment-header .comment-title{
+    float: left;
     font-size: 13px;
+    margin-left: 10px;
+    line-height: 20px;
 }
 
-.text {
-    color: white;
-    font-size: 15px;
-    padding-left: 5px;
-    padding-bottom: 5px;
+.comment-body{
+     overflow: hidden;
+    padding: 5px 10px;
 }
-
-.castContent {
-    display: flex;
-    flex-wrap: row wrap;
+.comment-nickname{
+     font-weight: bold;
+     float: left;
 }
-
-.actorIntroduction{
-    width: 25%;
-    margin-bottom: 20rpx;
-    text-align: center;
-}
-
-.actorIntroduction image {
-    height: 240rpx;
-    width: 160rpx;
-    padding: 0px 13rpx 0px 13rpx;
-}
-
-.actorName {
-    color: white;
-    font-size: 14px;
-    padding-top: 5px;
+.comment-article{
+    line-height: 16px;
+   
 }
 
 
+.comment-item{
+    width: 100%;
+   border-bottom:1px solid rgba(224,226,230,.3);
+   padding: 5px 0;
+   overflow: hidden;
+   display: flex;
+   flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.avatar-box{
+    flex-grow:1;
+}
+.comment-avatar{
+    width: 20px;
+    height: 20px;
+}
+.comment-content{
+     flex-grow:500;
+   font-size: 13px;
+   overflow: hidden;
+   margin-left: 10px;
+}
+.person-info{
+    height: 13px;
+    overflow: hidden;
+     margin-bottom: 5px;
+}
+.person-info image{
+    float: left;
+    margin-left: 5px;
+    margin-top:2px;
+}

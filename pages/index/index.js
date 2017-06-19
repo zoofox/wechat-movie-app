@@ -1,97 +1,23 @@
-var subjectUtil = require("../../utils/subjectUtil.js");
+var Api = require('../../utils/api.js');
+var Util = require('../../utils/util.js');
 // pages/main/main.js
 Page({
   data: {
-    imgUrls: [
-      '../../images/001.jpg',
-      '../../images/002.jpg',
-      '../../images/003.jpg'
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 3000,
-    duration: 1000,
-    hidden: true,
-    start: 1,
+    hidden: false,
+    offset: 0,
     count: 10
   },
   onLoad:function(e){
-  //  this.loadMovie();
+  this.loadDiary();
+    getApp().getUserInfo();
     console.log(e);
   },
   detail:function(e){
-    getApp().detail(e);
-  },
-  loadMovie:function(){
-    var page=this;
-    wx.request({
-      url: 'https://api.douban.com/v2/movie/in_theaters?count=' + page.data.count,
-      data: {movies:[]},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {
-        'Content-Type': 'json'
-      }, // 设置请求的 header
+     wx.navigateTo({
+      url: '../detail/detail?id=' + e.currentTarget.id,
       success: function(res){
-        var subjects=res.data.subjects;
-        subjectUtil.processSubjects(subjects);
-        page.setData({
-          movies:subjects,
-          hidden:true
-        });
-        try {
-          wx.setStorageSync('movies', subjects);
-        }catch(e){
-          console.warn(e);
-        }
-      }
-      // fail: function() {
-      //   // fail
-      // },
-      // complete: function() {
-      //   // complete
-      // }
-    });
-  },
-  onReachBottom:function(){
-    var page = this;
-    var start = page.data.start + page.data.count;
-    page.setData({
-      start: start,
-      hidden: false
-    });
-    wx.request({
-     url: 'https://api.douban.com/v2/movie/in_theaters?count=' + page.data.count + '&start=' + page.data.start,
-      data: {},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {'Content-Type': 'json'}, // 设置请求的 header
-      success: function(res){
-        // success
-        var subjects = res.data.subjects;
-        subjectUtil.processSubjects(subjects);
-        //console.log(subjects.length);
-        if(subjects.length!=0){
-         var movies = wx.getStorageSync('movies');
-         movies = movies.concat(subjects);
-         page.setData({     
-                movies: movies, 
-                hidden: true
-              });
-        }else {
-          page.setData({
-            hidden: true
-          });
-          wx.showToast({
-            title: '没内容啦',
-            icon: 'success',
-            duration: 2000
-          });
-        }
-        try{
-          wx.setStorageSync('movies', movies);
-        }catch(e){
-          console.warn(e);            
-        }
-       },
+        console.log(res);
+      },
       fail: function() {
         // fail
       },
@@ -99,12 +25,63 @@ Page({
         // complete
       }
     })
+  },
+  loadDiary:function(){
+     var page=this;
+     Util.AJAX(Api.getDiaryList,'POST',{count:page.data.count,offset:page.data.offset},function(res){
+      console.log(res.data)
+        if(res.data.code == 0){
+          page.setData({
+            diaries:res.data.docs,
+            hidden:true
+          });
+        }else{
+           page.setData({
+              diaries:[],
+              hidden: true
+            });
+            wx.showToast({
+              title: '没内容啦',
+              icon: 'success',
+              duration: 2000
+            });
+        }
+     })
+  }
+  ,
+  onReachBottom:function(){
+    var page = this;
+    var offset = page.data.offset + page.data.count;
+    page.setData({
+      offset: offset,
+      hidden: false
+    });
+
+     Util.AJAX(Api.getDiaryList,'POST',{count:page.data.count,offset:page.data.offset},function(res){
+      console.log(res.data)
+        if(res.data.code == 0){
+          let diaries = page.data.diaries.concat(res.data.docs);
+          page.setData({
+            diaries:diaries,
+            hidden:true
+          });
+        }else{
+           page.setData({
+              hidden: true
+            });
+            wx.showToast({
+              title: '没内容啦',
+              icon: 'success',
+              duration: 2000
+            });
+        }
+     })
    },
    onShareAppMessage: function(){
      return {
-       title: '热映电影',
-       desc: '我正在看热映的电影，你也一起来呀！',
-       path: '/pages/main/main'
+       title: '咕叽日记',
+       desc: '我在咕叽日记等你，这里有我的阴晴雨雪',
+       path: '/pages/index/index'
      }
    }
 })

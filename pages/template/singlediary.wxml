@@ -1,0 +1,32 @@
+<template name="diary">
+  <view class="diary-info">
+         <view class="diary-author-info"  bindtap="authorDetail" id="{{dinary.id}}">
+           <text class="diary-name">{{diary.diaryName}}</text>
+            <image style="width: 20px; height: 20px;" mode="aspectFit" src="../../images/grade/{{diary.user.rank}}.png"></image>
+           <text class="author-name">{{diary.user.authorName}}</text>
+            <image style="width: 20px; height: 20px;" mode="aspectFit" class='avatar' src="{{diary.user.avatar}}"></image>
+         </view>
+         <view class="date-weather-info"  bindtap="detail" id="{{dinary.id}}">
+             <text class="date-info">{{diary.time.day}}</text>
+             <text class="weather-info">天气：{{diary.weather}}</text>
+         </view>
+          <view class="diary-base"  bindtap="detail" id="{{dinary.id}}">{{diary.content}}</view>
+          <view class="operate-area">
+            <view class="agree-btn btn"  bindtap="agree" id="{{dinary.id}}">
+              <image class="agree-icon operate-icon"  mode="aspectFit" src="../../images/agree.png"></image>
+              <text class="introduce">{{diary.agree.length}}</text>
+              <!-- <text class="num">500</text> -->
+            </view>
+             <view class="hug-btn btn"  bindtap="hug" id="{{dinary.id}}">
+              <image class="hug-icon operate-icon"  mode="aspectFit" src="../../images/hug.png"></image>
+             <text class="introduce">{{diary.hugs.length}}</text>
+              <!-- <text class="num">500</text> -->
+            </view> 
+             <view class="score-btn btn"  bindtap="detail" id="{{dinary.id}}">
+              <image class="score-icon operate-icon"  mode="aspectFit" src="../../images/review.png"></image>
+             <text class="introduce">{{diary.reviews.length}}</text>
+              <!-- <text class="num">--</text> -->
+            </view>
+          </view>
+  </view>
+</template>
