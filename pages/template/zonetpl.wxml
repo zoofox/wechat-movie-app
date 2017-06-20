@@ -1,0 +1,16 @@
+<!--模板的声明-->
+<template name="diaries">
+    <block wx:for="{{diaries}}" wx:for-item="diary">
+      <view class="diary-info">
+       <view class="diary-author-info"  bindtap="authorDetail" id="{{diary.id}}">
+         <text class="diary-name">{{diary.diaryName}}</text>
+       </view>
+       <view class="date-weather-info"  bindtap="detail" id="{{diary.id}}">
+           <text class="date-info">{{diary.time.day}}</text>
+           <text class="weather-info">天气：{{diary.weather}}</text>
+       </view>
+        <view class="diary-base"  bindtap="detail" id="{{diary.id}}">{{diary.content}}</view>
+      </view>
+      <view class="hr"></view>
+    </block>   
+</template>

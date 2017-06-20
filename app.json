@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/recommend/recommend",
+    "pages/zone/zone",
     "pages/search/search",
     "pages/detail/detail"
   ],
@@ -23,7 +23,7 @@
       "selectedIconPath": "images/index2.png"
     },
     {
-      "pagePath": "pages/recommend/recommend",
+      "pagePath": "pages/zone/zone",
       "text": "我",
       "iconPath": "images/i.png",
       "selectedIconPath": "images/i2.png"

@@ -1,5 +1,4 @@
 <!--模板的声明-->
-{{diary}}
 <template name="diaries">
     <block wx:for="{{diaries}}" wx:for-item="diary">
       <view class="diary-info">

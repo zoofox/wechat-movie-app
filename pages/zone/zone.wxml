@@ -1,0 +1,27 @@
+<!--pages/zone/zone.wxml-->
+<view class="zone">
+	<view class="info-box">
+		<image mode="aspectFit" class='info-avatar' src="../../images/grade/0.png"></image>
+		<text class="authorname">笔名：达</text>
+		<view class="rank-info">
+			<text class="rank-name">段位：青铜</text>
+			<image mode="aspectFit" class='rank-img' src="../../images/grade/0.png"></image>
+		</view>
+	</view>
+	<view class="hr"></view>
+
+	<view class="content">
+	<text class="my-diary-tip">我的日记</text>
+	  <view class="separator"></view>
+	    <import src="../template/zonetpl"/>
+	    <template is="diaries" data="{{diaries}}"/>
+	  </view>
+
+</view>
+
+
+  <view class="bodyLoading">
+    <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">
+        咕叽咕叽...
+    </loading>
+  </view>
