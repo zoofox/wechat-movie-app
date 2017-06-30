@@ -6,6 +6,7 @@
 		<view class="rank-info">
 			<text class="rank-name">段位：青铜</text>
 			<image mode="aspectFit" class='rank-img' src="../../images/grade/0.png"></image>
+			<image mode="aspectFit" class='write' src="../../images/write.png"  bindtap="write"></image>
 		</view>
 	</view>
 	<view class="hr"></view>
@@ -18,8 +19,6 @@
 	  </view>
 
 </view>
-
-
   <view class="bodyLoading">
     <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">
         咕叽咕叽...

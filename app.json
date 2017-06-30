@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/zone/zone",
     "pages/search/search",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/zone/write"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -28,12 +29,7 @@
       "iconPath": "images/i.png",
       "selectedIconPath": "images/i2.png"
 
-    },
-    {
-      "pagePath": "pages/search/search",
-      "text": "搜索",
-      "iconPath": "images/search.png",
-      "selectedIconPath": "images/search2.png"
-    }]
+    }
+    ]
   }
 }

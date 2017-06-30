@@ -4,5 +4,7 @@ module.exports = {
 	getAccountByOpenId:Env.domain+'/users/getAccountByOpenId',
 	getDiaryList:Env.domain+'/diaries/list',
 	getOneDiary:Env.domain+'/diaries/get',
-	getCommentList:Env.domain+'/comments/list'
+	getCommentList:Env.domain+'/comments/list',
+	saveDiary:Env.domain+'/diaries/save',
+	saveComment:Env.domain+'/comments/save'
 }

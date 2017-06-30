@@ -1,0 +1,27 @@
+.section{
+	margin:5px 15px;
+	font-size: 12px;
+	overflow: hidden;
+}
+.switcher-view{
+	margin:5px 0 5px 15px;
+	font-size: 12px;
+	line-height: 26px;
+}
+textarea{
+	width: 100%;
+	font-size: 14px;
+}
+picker{
+	height:50px;
+	line-height:50px;       
+}
+.tip{
+	text-align: right;
+	line-height: 20px;
+	float: right;
+	color:#5C667A;
+}
+input{
+	border-bottom: 1px solid #DBDEE3;
+}

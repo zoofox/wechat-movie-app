@@ -3,6 +3,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
+	position: relative;
 }
 .info-box{
 	width: 100%;
@@ -41,6 +42,12 @@ text,image{
 	position:relative;
 	top:6px;
 
+}
+.write{
+	position: fixed;
+	right:10px;
+	top:10px;
+	width: 40px;height: 40px;
 }
 .hr{
     height: 1px;

@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
 <import src="../template/singlediary"/>
-<view wx:if="{{diary}}">
-    <template is="diary" data="{{diary}}"/>
+<view wx:if="{{datas.diary}}">
+    <template is="diary" data="{{datas}}"/>
 </view>
 <view class="comment-box">
     <view class="comment-header">
@@ -15,6 +15,10 @@
          <template is="comments" data="{{comments}}"/>
        </view>
     </view>
+</view>
+<view class="section">
+  <input placeholder="{{placeholder}}" auto-focus maxlength='32' value='' bindinput="bindKeyInputComment" focus='{{isFocus}}' bindblur='blur'/>
+  <view class="comment-btn" bindtap='submit'>评一个</view>
 </view>
 <view class="bodyLoading">
     <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">

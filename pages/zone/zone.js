@@ -12,9 +12,9 @@ Page({
     getApp().getUserInfo();
     console.log(e);
   },
-  detail:function(e){
+  write:function(e){
      wx.navigateTo({
-      url: '../detail/detail?id=' + e.currentTarget.id,
+      url: '../zone/write',
       success: function(res){
         console.log(res);
       },

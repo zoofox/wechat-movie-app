@@ -5,11 +5,11 @@ Page({
   data: {
     hidden: false,
     offset: 0,
-    count: 10
+    count: 10,
+    weathers:Util.weathers
   },
   onLoad:function(e){
   this.loadDiary();
-    getApp().getUserInfo();
     console.log(e);
   },
   detail:function(e){
@@ -32,12 +32,12 @@ Page({
       console.log(res.data)
         if(res.data.code == 0){
           page.setData({
-            diaries:res.data.docs,
+            datas:{diaries:res.data.docs,weathers:page.data.weathers},
             hidden:true
           });
         }else{
            page.setData({
-              diaries:[],
+             datas:{diaries:[],weathers:page.data.weathers},
               hidden: true
             });
             wx.showToast({
@@ -60,9 +60,9 @@ Page({
      Util.AJAX(Api.getDiaryList,'POST',{count:page.data.count,offset:page.data.offset},function(res){
       console.log(res.data)
         if(res.data.code == 0){
-          let diaries = page.data.diaries.concat(res.data.docs);
+          let diaries = page.data.datas.diaries.concat(res.data.docs);
           page.setData({
-            diaries:diaries,
+            datas:{diaries:diaries,weathers:page.data.weathers},
             hidden:true
           });
         }else{

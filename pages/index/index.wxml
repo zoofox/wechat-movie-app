@@ -2,7 +2,7 @@
 <view class="content">
   <view class="separator"></view>
     <import src="../template/diarytpl"/>
-    <template is="diaries" data="{{diaries}}"/>
+    <template is="diaries" data="{{datas}}"/>
   </view>
 
   <view class="bodyLoading">

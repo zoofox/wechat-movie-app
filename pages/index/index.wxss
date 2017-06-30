@@ -18,7 +18,11 @@
     display: flex;
     flex-direction: column;
     padding: 8px 10px 0;
+    background: url('https://127.0.0.1/images/0.jpg'); 
+    background-size: cover;
+    
 }
+
 .diary-author-info{
     padding: 3px 0;
     border-bottom:1px solid rgba(224,226,230,.3);
@@ -55,7 +59,7 @@
     font-size: 13px;
     line-height: 20px;
     text-indent: 20px;
-    
+     word-break:break-all;
 }
 
 .operate-area{

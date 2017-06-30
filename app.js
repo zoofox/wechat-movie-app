@@ -17,7 +17,10 @@ App({
     Api:Api,
     Util:Util,
     globalData: {
-        hasLogin: false
+        hasLogin: false,
+        userBaseInfo:{},
+        wxcode:'',
+        userInfo:''
     },
     getUserInfo:function(cb){
         var that = this;
@@ -37,7 +40,7 @@ App({
                         that.ownerInfoQuery(that.globalData.wxcode,function(res){
                           console.log(res)
                             if(res.code == 0){
-                                that.globalData.userInfo = res.datas;
+                                that.globalData.userInfo = res.user;
                                 typeof cb == "function" && cb(that.globalData.userInfo);
                             }else{
                                console.log('获取用户信息失败')

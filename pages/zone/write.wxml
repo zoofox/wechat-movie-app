@@ -1,0 +1,27 @@
+<view class="section">
+  <input placeholder="这里是标题" auto-focus maxlength='16' value='{{title}}' bindinput="bindKeyInputTitle"/>
+</view>
+<view class="section">
+  <textarea placeholder="有你在，阴晴雨雪都是美好" auto-focus maxlength='256' value='{{content}}' bindinput="bindKeyInputContent"/>
+  <text class="tip">（字数限制：256）</text>
+</view>
+
+<view class="switcher-view">
+	公开：
+    <switch checked bindchange="switch1Change"/>
+</view>
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{weather}}" range="{{array}}">
+    <view class="picker">
+      天气：{{array[weather]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+    <button  type='primary' bindtap='submit'> 提交 </button>
+</view>
+ <view class="bodyLoading">
+    <loading hidden="{{hidden}}" bindchange="{{loadingChange}}">
+        咕叽咕叽...
+    </loading>
+  </view>
